@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [clojure-euler.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest problem-001-tests
+  (testing "multiples of 3 and 5"
+    (is (= 23 (problem-001 10)))))

@@ -1,6 +1,6 @@
 (ns clojure-euler.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn problem-001
+  "Returns sum of all multiples of 3 or five below arg value."
+  [n]
+  23)
