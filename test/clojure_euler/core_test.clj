@@ -4,4 +4,5 @@
 
 (deftest problem-001-tests
   (testing "multiples of 3 and 5"
-    (is (= 23 (problem-001 10)))))
+    (is (= 23 (problem-001 10)))
+    (is (= 233168 (problem-001 1000)))))
