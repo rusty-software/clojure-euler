@@ -8,3 +8,8 @@
               (+ sum i)
               sum))]
     (reduce sum-when-appropriate (range n))))
+
+(defn problem-002
+  "Returns sum of even fibonacci numbers below arg value."
+  [n]
+  nil)
