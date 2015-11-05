@@ -18,4 +18,4 @@
 (defn problem-003
   "Returns the largest prime factor of a number."
   [n]
-  nil)
+  (last (filter helpers/prime? (helpers/factor-seq n))))

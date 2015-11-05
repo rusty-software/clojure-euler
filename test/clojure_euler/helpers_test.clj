@@ -24,5 +24,3 @@
 (deftest factor-seq-tests
   (is (= [1 3 9 27] (factor-seq 27))))
 
-(deftest prime-factor-seq-tests
-  (is (= [5 7 13 29] (prime-factor-seq 13195))))

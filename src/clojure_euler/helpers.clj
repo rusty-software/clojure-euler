@@ -29,7 +29,3 @@
               acc))]
     (reduce factor-acc [] (range 1 (inc n)))))
 
-(defn prime-factor-seq
-  "Returns sequence of prime factors of a number."
-  [n]
-  (filter prime? (factor-seq n)))
