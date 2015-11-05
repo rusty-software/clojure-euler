@@ -14,6 +14,11 @@
        vals
        (fibonacci-seq limit (conj vals next-val))))))
 
+(defn prime?
+  "Returns true if the number is prime, otherwise false."
+  [n]
+  (not (some #(zero? (mod n %)) (range 2 n))))
+
 (defn prime-factor-seq
   "Returns sequence of prime factors of a number."
   [n]
