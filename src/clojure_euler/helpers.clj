@@ -17,9 +17,19 @@
 (defn prime?
   "Returns true if the number is prime, otherwise false."
   [n]
-  (not (some #(zero? (mod n %)) (range 2 n))))
+  (and (> n 1)
+       (not (some #(zero? (mod n %)) (range 2 n)))))
+
+(defn factor-seq
+  "Returns sequence of factors of a number."
+  [n]
+  (letfn [(factor-acc [acc i]
+            (if (zero? (mod n i))
+              (conj acc i)
+              acc))]
+    (reduce factor-acc [] (range 1 (inc n)))))
 
 (defn prime-factor-seq
   "Returns sequence of prime factors of a number."
   [n]
-  nil)
+  (filter prime? (factor-seq n)))

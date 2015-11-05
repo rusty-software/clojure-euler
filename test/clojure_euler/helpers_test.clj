@@ -17,9 +17,12 @@
       (for [n primes]
         (is (prime? n)))))
   (testing "non-primes are not prime"
-    (let [non-primes [4 8 9 15 21 27 49 87]]
+    (let [non-primes [1 4 8 9 15 21 27 49 87]]
       (for [n non-primes]
         (is (not (prime? n)))))))
+
+(deftest factor-seq-tests
+  (is (= [1 3 9 27] (factor-seq 27))))
 
 (deftest prime-factor-seq-tests
   (is (= [5 7 13 29] (prime-factor-seq 13195))))
