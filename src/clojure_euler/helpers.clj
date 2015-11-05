@@ -13,3 +13,8 @@
      (if (>= next-val limit)
        vals
        (fibonacci-seq limit (conj vals next-val))))))
+
+(defn prime-factor-seq
+  "Returns sequence of prime factors of a number."
+  [n]
+  nil)

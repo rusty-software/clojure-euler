@@ -10,3 +10,6 @@
   (is (= [0 1 2 3] (fibonacci-seq 5)))
   (is (= [0 1 2 3 5 8] (fibonacci-seq 10)))
   (is (= [0 1 2 3 5 8 13 21 34 55 89] (fibonacci-seq 100))))
+
+(deftest prime-factor-seq-tests
+  (is (= [5 7 13 29] (prime-factor-seq 13195))))
