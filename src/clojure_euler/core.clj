@@ -1,4 +1,5 @@
-(ns clojure-euler.core)
+(ns clojure-euler.core
+  (require [clojure-euler.helpers :as helpers]))
 
 (defn problem-001
   "Returns sum of all multiples of 3 or 5 below arg value."
@@ -12,4 +13,4 @@
 (defn problem-002
   "Returns sum of even fibonacci numbers below arg value."
   [n]
-  nil)
+  (apply + (filter even? (helpers/fibonacci-seq n))))

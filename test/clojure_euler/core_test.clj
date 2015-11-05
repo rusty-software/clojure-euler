@@ -9,4 +9,5 @@
 
 (deftest problem-002-tests
   (testing "even fibonacci numbers"
-    (is (= (+ 2 8 34) (problem-002 10)))))
+    (is (= (+ 2 8 34) (problem-002 100)))
+    (is (= 4613732 (problem-002 4000000)))))
