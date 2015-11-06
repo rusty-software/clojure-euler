@@ -18,4 +18,16 @@
 (defn problem-003
   "Returns the largest prime factor of a number."
   [n]
-  nil)
+  (let [limit (long (Math/sqrt n))
+        prime-factors (loop [factors []
+                             primes helpers/primes]
+                        (let [candidate (first primes)
+                              factor-of? (fn [i] (zero? (mod n i)))
+                              new-factors (fn [i]
+                                            (if (factor-of? i)
+                                              (conj factors i)
+                                              factors))]
+                          (if (> candidate limit)
+                            factors
+                            (recur (new-factors candidate) (rest primes)))))]
+    (last prime-factors)))
