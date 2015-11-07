@@ -19,15 +19,15 @@
   "Returns the largest prime factor of a number."
   [n]
   (let [limit (long (Math/sqrt n))
-        prime-factors (loop [factors []
+        factor-of? (fn [i] (zero? (mod n i)))
+        new-factors (fn [factors i]
+                      (if (factor-of? i)
+                        (conj factors i)
+                        factors))
+        prime-factors (loop [current-factors []
                              primes helpers/primes]
-                        (let [candidate (first primes)
-                              factor-of? (fn [i] (zero? (mod n i)))
-                              new-factors (fn [i]
-                                            (if (factor-of? i)
-                                              (conj factors i)
-                                              factors))]
+                        (let [candidate (first primes)]
                           (if (> candidate limit)
-                            factors
-                            (recur (new-factors candidate) (rest primes)))))]
+                            current-factors
+                            (recur (new-factors current-factors candidate) (rest primes)))))]
     (last prime-factors)))
