@@ -12,7 +12,7 @@
     (is (= (+ 2 8 34) (problem-002 100)))
     (is (= 4613732 (problem-002 4000000)))))
 
-(deftest ^:single problem-003-tests
+(deftest problem-003-tests
   (testing "largest prime factor"
     (is (= 29 (problem-003 13195)))
     (is (= 6857 (problem-003 600851475143)))))
