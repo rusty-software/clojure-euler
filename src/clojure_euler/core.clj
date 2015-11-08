@@ -31,3 +31,8 @@
                             current-factors
                             (recur (new-factors current-factors candidate) (rest primes)))))]
     (last prime-factors)))
+
+(defn problem-004
+  "Returns the largest palindromic product of two numbers of a given number of digits."
+  [num-digits]
+  nil)

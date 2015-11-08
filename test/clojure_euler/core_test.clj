@@ -16,3 +16,7 @@
   (testing "largest prime factor"
     (is (= 29 (problem-003 13195)))
     (is (= 6857 (problem-003 600851475143)))))
+
+(deftest problem-004-tests
+  (testing "Largest palindrome product"
+    (is (= 9009 (problem-004 2)))))
