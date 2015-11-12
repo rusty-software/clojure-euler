@@ -35,4 +35,10 @@
 (defn problem-004
   "Returns the largest palindromic product of two numbers of a given number of digits."
   [num-digits]
-  nil)
+  (let [largest (inc (read-string (apply str (repeat num-digits "9"))))
+        smallest (inc (read-string (apply str (repeat (dec num-digits) "9"))))
+        products (for [n1 (range smallest largest)
+                       n2 (range smallest largest)]
+                   (* n1 n2))
+        palindromes (filter helpers/palindrome? products)]
+    (apply max palindromes)))

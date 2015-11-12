@@ -1,4 +1,5 @@
-(ns clojure-euler.helpers)
+(ns clojure-euler.helpers
+  (require [clojure.string :as str]))
 
 (defn fibonacci-seq
   "Returns sequence of fibonacci numbers below given value."
@@ -32,3 +33,7 @@
                         2 6 6 4 2 4 6 2 6 4 2 4 2 10 2 10])]
       (primes-from 11 wheel)))))
 
+(defn palindrome?
+  "Returns true if number is palindromic, otherwise false."
+  [n]
+  (= (str n) (str/reverse (str n))))

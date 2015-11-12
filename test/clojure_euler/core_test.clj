@@ -19,4 +19,5 @@
 
 (deftest problem-004-tests
   (testing "Largest palindrome product"
-    (is (= 9009 (problem-004 2)))))
+    (is (= 9009 (problem-004 2)))
+    (is (= 906609 (problem-004 3)))))
