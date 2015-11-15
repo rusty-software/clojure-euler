@@ -42,3 +42,11 @@
                    (* n1 n2))
         palindromes (filter helpers/palindrome? products)]
     (apply max palindromes)))
+
+(defn problem-005
+  "Returns the smallest positive number that can be evenly divided by each whole number in the range ending with a given value."
+  [n]
+  (loop [candidate n]
+    (if (every? true? (map #(helpers/factor-of? candidate %) (range 2 (inc n))))
+      candidate
+      (recur (+ candidate n)))))
