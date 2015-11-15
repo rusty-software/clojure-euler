@@ -11,6 +11,12 @@
   (is (= [0 1 2 3 5 8] (fibonacci-seq 10)))
   (is (= [0 1 2 3 5 8 13 21 34 55 89] (fibonacci-seq 100))))
 
+(deftest factor-of?-tests
+  (is (factor-of? 10 5))
+  (is (factor-of? 4 -2))
+  (is (not (factor-of? 22 7)))
+  (is (not (factor-of? 10 20))))
+
 (deftest palindrome?-tests
   (is (palindrome? 8008))
   (is (not (palindrome? 58008))))

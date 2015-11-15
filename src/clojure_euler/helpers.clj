@@ -33,6 +33,11 @@
                         2 6 6 4 2 4 6 2 6 4 2 4 2 10 2 10])]
       (primes-from 11 wheel)))))
 
+(defn factor-of?
+  "Returns true if numerator can be evenly divided by denominator, otherwise false"
+  [numerator denominator]
+  (zero? (mod numerator denominator)))
+
 (defn palindrome?
   "Returns true if number is palindromic, otherwise false."
   [n]
