@@ -22,7 +22,12 @@
     (is (= 9009 (problem-004 2)))
     (is (= 906609 (problem-004 3)))))
 
-(deftest ^:single problem-005-tests
+(deftest problem-005-tests
   (testing "Smallest multiple"
     (is (= 2520 (problem-005 10)))
     (is (= 232792560 (problem-005 20)))))
+
+(deftest problem-006-tests
+  (testing "Sum square difference"
+    (is (= 2640 (problem-006 10)))
+    (is (= 25164150 (problem-006 100)))))

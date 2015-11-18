@@ -50,3 +50,11 @@
     (if (every? true? (map #(helpers/factor-of? candidate %) (range 2 (inc n))))
       candidate
       (recur (+ candidate n)))))
+
+(defn problem-006
+  "Returns the difference between the sum of the squares and the square of the sum for the integer range below a given value."
+  [n]
+  (let [square (fn [i] (* i i))
+        sum-of-squares (apply + (map square (range (inc n))))
+        square-of-sums (square (apply + (range (inc n))))]
+    (- square-of-sums sum-of-squares)))
