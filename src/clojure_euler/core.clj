@@ -58,3 +58,8 @@
         sum-of-squares (apply + (map square (range (inc n))))
         square-of-sums (square (apply + (range (inc n))))]
     (- square-of-sums sum-of-squares)))
+
+(defn problem-007
+  "Returns the nth prime number"
+  [n]
+  (nth helpers/primes (dec n)))
